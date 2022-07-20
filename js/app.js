@@ -338,7 +338,7 @@ function Simulator() {
         SIMULATOR ARSITEKTUR ASTA KOSALA - KOSALI <br /> BANGUNAN TRADISIONAL
         BALI
       </h1>
-      <div className="md:grid md:grid-cols-3 md:gap-8">
+      <div className="sm:grid sm:grid-cols-3 sm:gap-8">
         <div className="py-4">
           <div
             onClick={() => handleMenu("1")}
