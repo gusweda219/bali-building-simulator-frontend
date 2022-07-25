@@ -278,7 +278,7 @@ function Menu3() {
             />
           </div>
           <div className="flex-1">
-            <p>Panjang Telapak Kaki Samping (cm)</p>
+            <p>Lebar Telapak Kaki (Ngandang)(cm)</p>
             <input
               type="text"
               pattern="^\d*(\.\d{0,5})?$"
