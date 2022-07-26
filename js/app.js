@@ -338,7 +338,7 @@ function Simulator() {
           src="../assets/bg-image.jpg"
           className="h-full w-full object-cover object-center absolute -z-10"
         />
-        <div className="relative top-[50%] left-[128px] -translate-y-[50%]">
+        <div className="absolute top-[50%] left-[128px] -translate-y-[50%]">
           <h1 className="inline-block bg-white/30 py-[16px] pr-[81px] text-[48px] font-bold font-display text-white">
             Karang Sukerti Simulator
           </h1>
