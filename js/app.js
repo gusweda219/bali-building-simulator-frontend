@@ -39,7 +39,7 @@ function Menu1() {
       <form onSubmit={handleSubmit}>
         <p className="text-[20px] text-gray-500">Panca Wara Kepala Keluarga</p>
         <select
-          className="rounded-[5px] px-[24px] py-[14px] outline-none w-full mt-2 drop-shadow-input appearance-none"
+          className="rounded-[5px] px-[24px] py-[15px] outline-none w-full mt-2 drop-shadow-input appearance-none text-[20px]"
           onChange={(e) => setPancaWara(e.target.value)}
         >
           <option value="umanis">Umanis</option>
@@ -53,7 +53,7 @@ function Menu1() {
           Sapta Wara Kepala Keluarga
         </p>
         <select
-          className="rounded-[5px] px-[24px] py-[14px] outline-none w-full mt-2 drop-shadow-input appearance-none"
+          className="rounded-[5px] px-[24px] py-[15px] outline-none w-full mt-2 drop-shadow-input appearance-none text-[20px]"
           onChange={(e) => setSaptaWara(e.target.value)}
         >
           <option value="redite">Redite</option>
@@ -66,7 +66,7 @@ function Menu1() {
         </select>
 
         <button
-          className={`w-full inline-flex items-center justify-center bg-primary text-white text-[20px] py-2 rounded-[5px] mt-[40px] ${
+          className={`w-full inline-flex items-center justify-center bg-primary text-white text-[20px] py-[15px] rounded-[5px] mt-[40px] ${
             loading && "bg-primary/80 cursor-not-allowed"
           }`}
           disabled={loading}
@@ -144,14 +144,14 @@ function Menu2() {
         <input
           type="text"
           pattern="^\d*(\.\d{0,5})?$"
-          className="rounded-[5px] px-[24px] py-[14px] outline-none w-full mt-2 drop-shadow-input"
+          className="rounded-[5px] px-[24px] py-[15px] outline-none w-full mt-2 drop-shadow-input text-[20px]"
           onChange={(e) => setYardLength(e.target.value)}
           required
         />
 
         <p className="text-[20px] text-gray-500 mt-[16px]">Arah Lahan</p>
         <select
-          className="rounded-[5px] px-[24px] py-[14px] outline-none w-full mt-2 drop-shadow-input appearance-none"
+          className="rounded-[5px] px-[24px] py-[15px] outline-none w-full mt-2 drop-shadow-input appearance-none text-[20px]"
           onChange={(e) => setLandDirection(e.target.value)}
         >
           <option value="utara">Utara</option>
@@ -161,7 +161,7 @@ function Menu2() {
         </select>
 
         <button
-          className={`w-full inline-flex items-center justify-center bg-primary text-white text-[20px] py-2 rounded-[5px] mt-[40px] ${
+          className={`w-full inline-flex items-center justify-center bg-primary text-white text-[20px] py-[15px] rounded-[5px] mt-[40px] ${
             loading && "bg-primary/80 cursor-not-allowed"
           }`}
           disabled={loading}
@@ -250,7 +250,7 @@ function Menu3() {
       <form onSubmit={handleSubmit}>
         <p className="text-[20px] text-gray-500">Arah Letak Pintu</p>
         <select
-          className="rounded-[5px] px-[24px] py-[14px] outline-none w-full mt-2 drop-shadow-input appearance-none"
+          className="rounded-[5px] px-[24px] py-[15px] outline-none w-full mt-2 drop-shadow-input appearance-none text-[20px]"
           onChange={(e) => setLandDirection(e.target.value)}
         >
           <option value="utara">Utara</option>
@@ -265,7 +265,7 @@ function Menu3() {
         <input
           type="text"
           pattern="^\d*(\.\d{0,5})?$"
-          className="rounded-[5px] px-[24px] py-[14px] outline-none w-full mt-2 drop-shadow-input"
+          className="rounded-[5px] px-[24px] py-[15px] outline-none w-full mt-2 drop-shadow-input text-[20px]"
           onChange={(e) => setFootLength(parseFloat(e.target.value))}
           required
         />
@@ -276,13 +276,13 @@ function Menu3() {
         <input
           type="text"
           pattern="^\d*(\.\d{0,5})?$"
-          className="rounded-[5px] px-[24px] py-[14px] outline-none w-full mt-2 drop-shadow-input"
+          className="rounded-[5px] px-[24px] py-[15px] outline-none w-full mt-2 drop-shadow-input text-[20px]"
           onChange={(e) => setSideFootLength(parseFloat(e.target.value))}
           required
         />
 
         <button
-          className={`w-full inline-flex items-center justify-center bg-primary text-white text-[20px] py-2 rounded-[5px] mt-[40px] ${
+          className={`w-full inline-flex items-center justify-center bg-primary text-white text-[20px] py-[15px] rounded-[5px] mt-[40px] ${
             loading && "bg-primary/80 cursor-not-allowed"
           }`}
           disabled={loading}
