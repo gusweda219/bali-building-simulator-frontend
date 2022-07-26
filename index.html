@@ -4,7 +4,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simulator</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#092A6C',
+              secondary: '#96623B'
+            },
+            fontFamily: {
+              display: ['Poppins']
+            },
+            dropShadow: {
+              input: '-10px 10px 30px rgba(174, 174, 174, 0.2)',
+            },
+          }
+        }
+      }
+    </script>
   </head>
   <body>
     <div id="app"></div>

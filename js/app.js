@@ -35,41 +35,39 @@ function Menu1() {
   };
 
   return (
-    <div>
+    <div className="md:grid md:grid-cols-3 md:gap-[20px] py-[60px] font-display">
       <form onSubmit={handleSubmit}>
-        <div className="flex flex-col sm:flex-row gap-2">
-          <div className="flex-1">
-            <p>Panca Wara Kepala Keluarga</p>
-            <select
-              className="border border-[#557AD6] rounded-md p-2 focus:outline-[#557AD6] w-full"
-              onChange={(e) => setPancaWara(e.target.value)}
-            >
-              <option value="umanis">Umanis</option>
-              <option value="paing">Paing</option>
-              <option value="pon">Pon</option>
-              <option value="wage">Wage</option>
-              <option value="kliwon">Kliwon</option>
-            </select>
-          </div>
-          <div className="flex-1">
-            <p>Sapta Wara Kepala Keluarga</p>
-            <select
-              className="border border-[#557AD6] rounded-md p-2 focus:outline-[#557AD6] w-full"
-              onChange={(e) => setSaptaWara(e.target.value)}
-            >
-              <option value="redite">Redite</option>
-              <option value="soma">Soma</option>
-              <option value="anggara">Anggara</option>
-              <option value="budha">Budha</option>
-              <option value="wrespati">Wrespati</option>
-              <option value="sukra">Sukra</option>
-              <option value="saniscara">Saniscara</option>
-            </select>
-          </div>
-        </div>
+        <p className="text-[20px] text-gray-500">Panca Wara Kepala Keluarga</p>
+        <select
+          className="rounded-[5px] px-[24px] py-[14px] outline-none w-full mt-2 drop-shadow-input"
+          onChange={(e) => setPancaWara(e.target.value)}
+        >
+          <option value="umanis">Umanis</option>
+          <option value="paing">Paing</option>
+          <option value="pon">Pon</option>
+          <option value="wage">Wage</option>
+          <option value="kliwon">Kliwon</option>
+        </select>
+
+        <p className="text-[20px] text-gray-500 mt-[16px]">
+          Sapta Wara Kepala Keluarga
+        </p>
+        <select
+          className="rounded-[5px] px-[24px] py-[14px] outline-none w-full mt-2 drop-shadow-input"
+          onChange={(e) => setSaptaWara(e.target.value)}
+        >
+          <option value="redite">Redite</option>
+          <option value="soma">Soma</option>
+          <option value="anggara">Anggara</option>
+          <option value="budha">Budha</option>
+          <option value="wrespati">Wrespati</option>
+          <option value="sukra">Sukra</option>
+          <option value="saniscara">Saniscara</option>
+        </select>
+
         <button
-          className={`inline-flex items-center bg-[#557AD6] text-white py-2 px-5 rounded-lg mt-4 ${
-            loading && "bg-[#7996df] cursor-not-allowed"
+          className={`w-full inline-flex items-center justify-center bg-primary text-white text-[20px] py-2 rounded-[5px] mt-[40px] ${
+            loading && "bg-primary/80 cursor-not-allowed"
           }`}
           disabled={loading}
         >
@@ -99,7 +97,7 @@ function Menu1() {
         </button>
       </form>
       {landDirection && (
-        <div className="bg-[#1982C4] p-2 rounded-md text-white">
+        <div className="md:col-span-2 h-min bg-primary p-4 rounded-md text-white text-[20px] text-center md:text-left">
           <p className="font-bold">Arah {landDirection}</p>
         </div>
       )}
@@ -140,35 +138,31 @@ function Menu2() {
   };
 
   return (
-    <div>
+    <div className="md:grid md:grid-cols-3 md:gap-[20px] py-[60px] font-display">
       <form onSubmit={handleSubmit}>
-        <div className="flex flex-col sm:flex-row gap-2">
-          <div className="flex-1">
-            <p>Panjang Pekarangan (m)</p>
-            <input
-              type="text"
-              pattern="^\d*(\.\d{0,5})?$"
-              className="border border-[#557AD6] rounded-md p-2 focus:outline-[#557AD6] w-full"
-              onChange={(e) => setYardLength(e.target.value)}
-              required
-            />
-          </div>
-          <div className="flex-1">
-            <p>Arah Lahan</p>
-            <select
-              className="border border-[#557AD6] rounded-md p-2 focus:outline-[#557AD6] w-full"
-              onChange={(e) => setLandDirection(e.target.value)}
-            >
-              <option value="utara">Utara</option>
-              <option value="timur">Timur</option>
-              <option value="selatan">Selatan</option>
-              <option value="barat">Barat</option>
-            </select>
-          </div>
-        </div>
+        <p className="text-[20px] text-gray-500">Panjang Pekarangan (m)</p>
+        <input
+          type="text"
+          pattern="^\d*(\.\d{0,5})?$"
+          className="rounded-[5px] px-[24px] py-[14px] outline-none w-full mt-2 drop-shadow-input"
+          onChange={(e) => setYardLength(e.target.value)}
+          required
+        />
+
+        <p className="text-[20px] text-gray-500 mt-[16px]">Arah Lahan</p>
+        <select
+          className="rounded-[5px] px-[24px] py-[14px] outline-none w-full mt-2 drop-shadow-input"
+          onChange={(e) => setLandDirection(e.target.value)}
+        >
+          <option value="utara">Utara</option>
+          <option value="timur">Timur</option>
+          <option value="selatan">Selatan</option>
+          <option value="barat">Barat</option>
+        </select>
+
         <button
-          className={`inline-flex items-center bg-[#557AD6] text-white py-2 px-5 rounded-lg mt-4 ${
-            loading && "bg-[#7996df] cursor-not-allowed"
+          className={`w-full inline-flex items-center justify-center bg-primary text-white text-[20px] py-2 rounded-[5px] mt-[40px] ${
+            loading && "bg-primary/80 cursor-not-allowed"
           }`}
           disabled={loading}
         >
@@ -198,13 +192,13 @@ function Menu2() {
         </button>
       </form>
       {data && (
-        <div className="lg:grid lg:grid-cols-5 gap-2">
+        <div className="md:col-span-2 lg:grid lg:grid-cols-5 gap-2">
           <img
             className="col-span-3"
             src={`data:image/png;base64,${data.bytesImg}`}
             alt="Letak Pintu"
           />
-          <div className="col-span-2 bg-[#1982C4] rounded-md p-4 text-white my-4 lg:my-0">
+          <div className="col-span-2 bg-primary rounded-md p-4 text-white my-4 lg:my-0">
             <p className="uppercase font-semibold">
               Filosofi Letak Setiap Pintu
             </p>
@@ -252,45 +246,44 @@ function Menu3() {
   };
 
   return (
-    <div>
+    <div className="md:grid md:grid-cols-3 md:gap-[20px] py-[60px] font-display">
       <form onSubmit={handleSubmit}>
-        <div className="flex flex-col lg:flex-row gap-2">
-          <div className="flex-1">
-            <p>Arah Letak Pintu</p>
-            <select
-              className="border border-[#557AD6] rounded-md p-2 focus:outline-[#557AD6] w-full"
-              onChange={(e) => setLandDirection(e.target.value)}
-            >
-              <option value="utara">Utara</option>
-              <option value="timur">Timur</option>
-              <option value="selatan">Selatan</option>
-              <option value="barat">Barat</option>
-            </select>
-          </div>
-          <div className="flex-1">
-            <p>Panjang Telapak Kaki (cm)</p>
-            <input
-              type="text"
-              pattern="^\d*(\.\d{0,5})?$"
-              className="border border-[#557AD6] rounded-md p-2 focus:outline-[#557AD6] w-full"
-              onChange={(e) => setFootLength(parseFloat(e.target.value))}
-              required
-            />
-          </div>
-          <div className="flex-1">
-            <p>Lebar Telapak Kaki (Ngandang)(cm)</p>
-            <input
-              type="text"
-              pattern="^\d*(\.\d{0,5})?$"
-              className="border border-[#557AD6] rounded-md p-2 focus:outline-[#557AD6] w-full"
-              onChange={(e) => setSideFootLength(parseFloat(e.target.value))}
-              required
-            />
-          </div>
-        </div>
+        <p className="text-[20px] text-gray-500">Arah Letak Pintu</p>
+        <select
+          className="rounded-[5px] px-[24px] py-[14px] outline-none w-full mt-2 drop-shadow-input"
+          onChange={(e) => setLandDirection(e.target.value)}
+        >
+          <option value="utara">Utara</option>
+          <option value="timur">Timur</option>
+          <option value="selatan">Selatan</option>
+          <option value="barat">Barat</option>
+        </select>
+
+        <p className="text-[20px] text-gray-500 mt-[16px]">
+          Panjang Telapak Kaki (cm)
+        </p>
+        <input
+          type="text"
+          pattern="^\d*(\.\d{0,5})?$"
+          className="rounded-[5px] px-[24px] py-[14px] outline-none w-full mt-2 drop-shadow-input"
+          onChange={(e) => setFootLength(parseFloat(e.target.value))}
+          required
+        />
+
+        <p className="text-[20px] text-gray-500 mt-[16px]">
+          Lebar Telapak Kaki (cm)
+        </p>
+        <input
+          type="text"
+          pattern="^\d*(\.\d{0,5})?$"
+          className="rounded-[5px] px-[24px] py-[14px] outline-none w-full mt-2 drop-shadow-input"
+          onChange={(e) => setSideFootLength(parseFloat(e.target.value))}
+          required
+        />
+
         <button
-          className={`inline-flex items-center bg-[#557AD6] text-white py-2 px-5 rounded-lg mt-4 ${
-            loading && "bg-[#7996df] cursor-not-allowed"
+          className={`w-full inline-flex items-center justify-center bg-primary text-white text-[20px] py-2 rounded-[5px] mt-[40px] ${
+            loading && "bg-primary/80 cursor-not-allowed"
           }`}
           disabled={loading}
         >
@@ -320,7 +313,13 @@ function Menu3() {
         </button>
       </form>
 
-      {image && <img src={image} alt="Tata Letak Bangunan Bali" />}
+      {image && (
+        <img
+          className="col-span-2"
+          src={image}
+          alt="Tata Letak Bangunan Bali"
+        />
+      )}
     </div>
   );
 }
@@ -333,49 +332,52 @@ function Simulator() {
   }
 
   return (
-    <div className="max-w-[1240px] mx-auto p-2">
-      <h1 className="text-center font-bold p-2 text-lg sm:text-xl">
-        SIMULATOR ARSITEKTUR ASTA KOSALA - KOSALI <br /> BANGUNAN TRADISIONAL
-        BALI
-      </h1>
-      <div className="sm:grid sm:grid-cols-3 sm:gap-8">
-        <div className="py-4">
+    <div className="max-w-[1240px] mx-auto">
+      <div className="relative h-[552px]">
+        <img
+          src="../assets/bg-image.jpg"
+          className="h-full w-full object-cover object-center absolute -z-10"
+        />
+        <div className="relative top-[50%] left-[128px] -translate-y-[50%]">
+          <h1 className="inline-block bg-white/30 py-[16px] pr-[81px] text-[48px] font-bold font-display text-white">
+            Karang Sukerti Simulator
+          </h1>
+        </div>
+      </div>
+      <div className="p-2">
+        <div className="pt-[64px] md:grid md:grid-cols-3 md:gap-[20px]">
           <div
             onClick={() => handleMenu("1")}
-            className={`"w-full bg-[#557AD6] py-2 px-4 rounded-md text-white mt-2 cursor-pointer" ${
-              menu !== "1" &&
-              "bg-[#FFFFFF] border border-[#557AD6] text-[#557AD6] cursor-pointer"
+            className={`bg-primary py-[15px] my-4 md:my-0 rounded-[5px] cursor-pointer ${
+              menu === "1" && "bg-secondary"
             }`}
           >
-            <p>Arah Lahan Rumah</p>
+            <p className="text-white text-center text-[20px] font-display">
+              Arah Lahan Rumah
+            </p>
           </div>
           <div
             onClick={() => handleMenu("2")}
-            className={`"w-full bg-[#557AD6] py-2 px-4 rounded-md text-white mt-2 cursor-pointer" ${
-              menu !== "2" &&
-              "bg-[#FFFFFF] border border-[#557AD6] text-[#557AD6] cursor-pointer"
+            className={`bg-primary py-[15px] my-4 md:my-0 rounded-[5px] cursor-pointer ${
+              menu === "2" && "bg-secondary"
             }`}
           >
-            <p>Letak Pintu Pekarangan</p>
+            <p className="text-white text-center text-[20px] font-display">
+              Letak Pintu Pekarangan
+            </p>
           </div>
           <div
             onClick={() => handleMenu("3")}
-            className={`"w-full bg-[#557AD6] py-2 px-4 rounded-md text-white mt-2 cursor-pointer" ${
-              menu !== "3" &&
-              "bg-[#FFFFFF] border border-[#557AD6] text-[#557AD6] cursor-pointer"
+            className={`bg-primary py-[15px] my-4 md:my-0 rounded-[5px] cursor-pointer ${
+              menu === "3" && "bg-secondary"
             }`}
           >
-            <p>Tata Letak Bangunan</p>
+            <p className="text-white text-center text-[20px] font-display">
+              Tata Letak Bangunan
+            </p>
           </div>
         </div>
-        <div className="col-span-2 py-4">
-          <h3 className="text-center font-semibold uppercase mb-4">
-            {menu === "1"
-              ? "Menentuan Arah Lahan Rumah Berdasarkan Hari Lahir"
-              : menu === "2"
-              ? "Menentukan Letak Pintu Pekarangan"
-              : "Menentukan Tata Letak Bangunan Menggunakan Konsep Sanga Mandala"}
-          </h3>
+        <div>
           {menu === "1" ? <Menu1 /> : menu === "2" ? <Menu2 /> : <Menu3 />}
         </div>
       </div>
