@@ -53,7 +53,7 @@ function Menu1() {
           Sapta Wara Kepala Keluarga
         </p>
         <select
-          className="rounded-[5px] px-[24px] py-[14px] outline-none w-full mt-2 drop-shadow-input"
+          className="rounded-[5px] px-[24px] py-[14px] outline-none w-full mt-2 drop-shadow-input appearance-none"
           onChange={(e) => setSaptaWara(e.target.value)}
         >
           <option value="redite">Redite</option>
@@ -151,7 +151,7 @@ function Menu2() {
 
         <p className="text-[20px] text-gray-500 mt-[16px]">Arah Lahan</p>
         <select
-          className="rounded-[5px] px-[24px] py-[14px] outline-none w-full mt-2 drop-shadow-input"
+          className="rounded-[5px] px-[24px] py-[14px] outline-none w-full mt-2 drop-shadow-input appearance-none"
           onChange={(e) => setLandDirection(e.target.value)}
         >
           <option value="utara">Utara</option>
@@ -250,7 +250,7 @@ function Menu3() {
       <form onSubmit={handleSubmit}>
         <p className="text-[20px] text-gray-500">Arah Letak Pintu</p>
         <select
-          className="rounded-[5px] px-[24px] py-[14px] outline-none w-full mt-2 drop-shadow-input"
+          className="rounded-[5px] px-[24px] py-[14px] outline-none w-full mt-2 drop-shadow-input appearance-none"
           onChange={(e) => setLandDirection(e.target.value)}
         >
           <option value="utara">Utara</option>
