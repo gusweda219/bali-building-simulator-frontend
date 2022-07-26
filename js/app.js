@@ -39,7 +39,7 @@ function Menu1() {
       <form onSubmit={handleSubmit}>
         <p className="text-[20px] text-gray-500">Panca Wara Kepala Keluarga</p>
         <select
-          className="rounded-[5px] px-[24px] py-[14px] outline-none w-full mt-2 drop-shadow-input"
+          className="rounded-[5px] px-[24px] py-[14px] outline-none w-full mt-2 drop-shadow-input appearance-none"
           onChange={(e) => setPancaWara(e.target.value)}
         >
           <option value="umanis">Umanis</option>
