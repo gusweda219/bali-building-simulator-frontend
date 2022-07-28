@@ -35,13 +35,13 @@ function Menu1() {
   };
 
   return (
-    <div className="md:grid md:grid-cols-3 md:gap-[20px] py-[10px] md:py-[30px] lg:py-[60px] font-display">
+    <div className="md:grid md:grid-cols-3 md:gap-[20px] py-[10px] md:py-[30px] font-display">
       <form onSubmit={handleSubmit}>
-        <p className="text-[14px] md:text-[16px] lg:text-[20px] text-gray-500">
+        <p className="text-[14px] md:text-[16px] text-gray-500">
           Panca Wara Kepala Keluarga
         </p>
         <select
-          className="rounded-[5px] px-[24px] py-[8px] md:py-[10px] lg:py-[15px] outline-none w-full mt-2 drop-shadow-input appearance-none text-[14px] md:text-[16px] lg:text-[20px]"
+          className="rounded-[5px] px-[24px] py-[8px] md:py-[10px] outline-none w-full mt-2 drop-shadow-input appearance-none text-[14px] md:text-[16px]"
           onChange={(e) => setPancaWara(e.target.value)}
         >
           <option value="umanis">Umanis</option>
@@ -51,11 +51,11 @@ function Menu1() {
           <option value="kliwon">Kliwon</option>
         </select>
 
-        <p className="text-[14px] md:text-[16px] lg:text-[20px] text-gray-500 mt-[16px]">
+        <p className="text-[14px] md:text-[16px] text-gray-500 mt-[16px]">
           Sapta Wara Kepala Keluarga
         </p>
         <select
-          className="rounded-[5px] px-[24px] py-[8px] md:py-[10px] lg:py-[15px] outline-none w-full mt-2 drop-shadow-input appearance-none text-[14px] md:text-[16px] lg:text-[20px]"
+          className="rounded-[5px] px-[24px] py-[8px] md:py-[10px] outline-none w-full mt-2 drop-shadow-input appearance-none text-[14px] md:text-[16px]"
           onChange={(e) => setSaptaWara(e.target.value)}
         >
           <option value="redite">Redite</option>
@@ -68,7 +68,7 @@ function Menu1() {
         </select>
 
         <button
-          className={`w-full inline-flex items-center justify-center bg-primary text-white text-[14px] md:text-[16px] lg:text-[20px] py-[8px] md:py-[10px] lg:py-[15px] rounded-[5px] mt-[20px] md:mt-[40px] ${
+          className={`w-full inline-flex items-center justify-center bg-primary text-white text-[14px] md:text-[16px] py-[8px] md:py-[10px] rounded-[5px] mt-[20px] md:mt-[30px] ${
             loading && "bg-primary/80 cursor-not-allowed"
           }`}
           disabled={loading}
@@ -99,7 +99,7 @@ function Menu1() {
         </button>
       </form>
       {landDirection && (
-        <div className="md:col-span-2 h-min bg-primary px-4 py-[8px] md:py-[10px] lg:py-[15px] rounded-md text-white text-[14px] md:text-[16px] lg:text-[20px] text-center md:text-left">
+        <div className="md:col-span-2 h-min bg-primary px-4 py-[8px] md:py-[10px] rounded-md text-white text-[14px] md:text-[16px] text-center md:text-left">
           <p className="font-bold">Arah {landDirection}</p>
         </div>
       )}
@@ -140,24 +140,24 @@ function Menu2() {
   };
 
   return (
-    <div className="md:grid md:grid-cols-3 md:gap-[20px] py-[10px] md:py-[30px] lg:py-[60px] font-display">
+    <div className="md:grid md:grid-cols-3 md:gap-[20px] py-[10px] md:py-[30px] font-display">
       <form onSubmit={handleSubmit}>
-        <p className="text-[14px] md:text-[16px] lg:text-[20px] text-gray-500">
+        <p className="text-[14px] md:text-[16px] text-gray-500">
           Panjang Pekarangan (m)
         </p>
         <input
           type="text"
           pattern="^\d*(\.\d{0,5})?$"
-          className="rounded-[5px] px-[24px] py-[8px] md:py-[10px] lg:py-[15px] outline-none w-full mt-2 drop-shadow-input appearance-none text-[14px] md:text-[16px] lg:text-[20px]"
+          className="rounded-[5px] px-[24px] py-[8px] md:py-[10px] outline-none w-full mt-2 drop-shadow-input appearance-none text-[14px] md:text-[16px]"
           onChange={(e) => setYardLength(e.target.value)}
           required
         />
 
-        <p className="text-[14px] md:text-[16px] lg:text-[20px] text-gray-500 mt-[16px]">
+        <p className="text-[14px] md:text-[16px] text-gray-500 mt-[16px]">
           Arah Lahan
         </p>
         <select
-          className="rounded-[5px] px-[24px] py-[8px] md:py-[10px] lg:py-[15px] outline-none w-full mt-2 drop-shadow-input appearance-none text-[14px] md:text-[16px] lg:text-[20px]"
+          className="rounded-[5px] px-[24px] py-[8px] md:py-[10px] outline-none w-full mt-2 drop-shadow-input appearance-none text-[14px] md:text-[16px]"
           onChange={(e) => setLandDirection(e.target.value)}
         >
           <option value="utara">Utara</option>
@@ -167,7 +167,7 @@ function Menu2() {
         </select>
 
         <button
-          className={`w-full inline-flex items-center justify-center bg-primary text-white text-[14px] md:text-[16px] lg:text-[20px] py-[8px] md:py-[10px] lg:py-[15px] rounded-[5px] mt-[20px] md:mt-[40px] ${
+          className={`w-full inline-flex items-center justify-center bg-primary text-white text-[14px] md:text-[16px] py-[8px] md:py-[10px] rounded-[5px] mt-[20px] md:mt-[30px] ${
             loading && "bg-primary/80 cursor-not-allowed"
           }`}
           disabled={loading}
@@ -252,13 +252,13 @@ function Menu3() {
   };
 
   return (
-    <div className="md:grid md:grid-cols-3 md:gap-[20px] py-[10px] md:py-[30px] lg:py-[60px] font-display">
+    <div className="md:grid md:grid-cols-3 md:gap-[20px] py-[10px] md:py-[30px] font-display">
       <form onSubmit={handleSubmit}>
-        <p className="text-[14px] md:text-[16px] lg:text-[20px] text-gray-500">
+        <p className="text-[14px] md:text-[16px] text-gray-500">
           Arah Letak Pintu
         </p>
         <select
-          className="rounded-[5px] px-[24px] py-[8px] md:py-[10px] lg:py-[15px] outline-none w-full mt-2 drop-shadow-input appearance-none text-[14px] md:text-[16px] lg:text-[20px]"
+          className="rounded-[5px] px-[24px] py-[8px] md:py-[10px] outline-none w-full mt-2 drop-shadow-input appearance-none text-[14px] md:text-[16px]"
           onChange={(e) => setLandDirection(e.target.value)}
         >
           <option value="utara">Utara</option>
@@ -267,30 +267,30 @@ function Menu3() {
           <option value="barat">Barat</option>
         </select>
 
-        <p className="text-[14px] md:text-[16px] lg:text-[20px] text-gray-500 mt-[16px]">
+        <p className="text-[14px] md:text-[16px] text-gray-500 mt-[16px]">
           Panjang Telapak Kaki (cm)
         </p>
         <input
           type="text"
           pattern="^\d*(\.\d{0,5})?$"
-          className="rounded-[5px] px-[24px] py-[8px] md:py-[10px] lg:py-[15px] outline-none w-full mt-2 drop-shadow-input appearance-none text-[14px] md:text-[16px] lg:text-[20px]"
+          className="rounded-[5px] px-[24px] py-[8px] md:py-[10px] outline-none w-full mt-2 drop-shadow-input appearance-none text-[14px] md:text-[16px]"
           onChange={(e) => setFootLength(parseFloat(e.target.value))}
           required
         />
 
-        <p className="text-[14px] md:text-[16px] lg:text-[20px] text-gray-500 mt-[16px]">
+        <p className="text-[14px] md:text-[16px] text-gray-500 mt-[16px]">
           Lebar Telapak Kaki (cm)
         </p>
         <input
           type="text"
           pattern="^\d*(\.\d{0,5})?$"
-          className="rounded-[5px] px-[24px] py-[8px] md:py-[10px] lg:py-[15px] outline-none w-full mt-2 drop-shadow-input appearance-none text-[14px] md:text-[16px] lg:text-[20px]"
+          className="rounded-[5px] px-[24px] py-[8px] md:py-[10px] outline-none w-full mt-2 drop-shadow-input appearance-none text-[14px] md:text-[16px]"
           onChange={(e) => setSideFootLength(parseFloat(e.target.value))}
           required
         />
 
         <button
-          className={`w-full inline-flex items-center justify-center bg-primary text-white text-[14px] md:text-[16px] lg:text-[20px] py-[8px] md:py-[10px] lg:py-[15px] rounded-[5px] mt-[20px] md:mt-[40px] ${
+          className={`w-full inline-flex items-center justify-center bg-primary text-white text-[14px] md:text-[16px] py-[8px] md:py-[10px] rounded-[5px] mt-[20px] md:mt-[40px] ${
             loading && "bg-primary/80 cursor-not-allowed"
           }`}
           disabled={loading}
@@ -356,31 +356,31 @@ function Simulator() {
         <div className="pt-[20px] md:grid md:grid-cols-3 md:gap-[20px]">
           <div
             onClick={() => handleMenu("1")}
-            className={`bg-primary py-[8px] md:py-[10px] lg:py-[15px] my-4 md:my-0 rounded-[5px] cursor-pointer ${
+            className={`bg-primary py-[8px] md:py-[10px] my-4 md:my-0 rounded-[5px] cursor-pointer ${
               menu === "1" && "bg-secondary"
             }`}
           >
-            <p className="text-white text-center text-[14px] md:text-[16px] lg:text-[20px] font-display">
+            <p className="text-white text-center text-[14px] md:text-[16px] font-display">
               Arah Lahan Rumah
             </p>
           </div>
           <div
             onClick={() => handleMenu("2")}
-            className={`bg-primary py-[8px] md:py-[10px] lg:py-[15px] my-4 md:my-0 rounded-[5px] cursor-pointer ${
+            className={`bg-primary py-[8px] md:py-[10px] my-4 md:my-0 rounded-[5px] cursor-pointer ${
               menu === "2" && "bg-secondary"
             }`}
           >
-            <p className="text-white text-center text-[14px] md:text-[16px] lg:text-[20px] font-display">
+            <p className="text-white text-center text-[14px] md:text-[16px] font-display">
               Letak Pintu Pekarangan
             </p>
           </div>
           <div
             onClick={() => handleMenu("3")}
-            className={`bg-primary py-[8px] md:py-[10px] lg:py-[15px] my-4 md:my-0 rounded-[5px] cursor-pointer ${
+            className={`bg-primary py-[8px] md:py-[10px] my-4 md:my-0 rounded-[5px] cursor-pointer ${
               menu === "3" && "bg-secondary"
             }`}
           >
-            <p className="text-white text-center text-[14px] md:text-[16px] lg:text-[20px] font-display">
+            <p className="text-white text-center text-[14px] md:text-[16px] font-display">
               Tata Letak Bangunan
             </p>
           </div>
