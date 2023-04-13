@@ -12,7 +12,7 @@ function Menu1() {
     const fields = { pancaWara, saptaWara };
     setLoading(true);
     const response = await fetch(
-      "https://simulatorapi.herokuapp.com/api/landDirection",
+      "https://bali-building-simulator-api.vercel.app/api/landDirection",
       {
         method: "POST",
         body: JSON.stringify(fields),
@@ -121,7 +121,7 @@ function Menu2() {
     setLoading(true);
 
     const response = await fetch(
-      "https://simulatorapi.herokuapp.com/api/locationDoor",
+      "https://bali-building-simulator-api.vercel.app/api/locationDoor",
       {
         method: "POST",
         body: JSON.stringify(fields),
@@ -233,7 +233,7 @@ function Menu3() {
     setLoading(true);
 
     const response = await fetch(
-      "https://simulatorapi.herokuapp.com/api/buildingLocation",
+      "https://bali-building-simulator-api.vercel.app/api/buildingLocation",
       {
         method: "POST",
         body: JSON.stringify(fields),
